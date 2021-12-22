@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFB75A7D9412BE92907FDB77 /* Pods_LottoreCommend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */; };
 		E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E087E277358E200F7B127 /* AppDelegate.swift */; };
 		E37E0881277358E200F7B127 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0880277358E200F7B127 /* SceneDelegate.swift */; };
 		E37E0883277358E200F7B127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0882277358E200F7B127 /* ViewController.swift */; };
 		E37E0886277358E200F7B127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37E0884277358E200F7B127 /* Main.storyboard */; };
 		E37E0888277358E300F7B127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37E0887277358E300F7B127 /* Assets.xcassets */; };
 		E37E088B277358E300F7B127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37E0889277358E300F7B127 /* LaunchScreen.storyboard */; };
-		E37E089E27735E8F00F7B127 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E089D27735E8F00F7B127 /* StatisticsView.swift */; };
+		E37E089E27735E8F00F7B127 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E089D27735E8F00F7B127 /* StatisticsViewController.swift */; };
+		E37E08A127736FE300F7B127 /* intro_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E37E08A027736FE300F7B127 /* intro_img.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoreCommend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFD7BCD18F0BB1C50019EAE /* Pods-LottoreCommend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.debug.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.debug.xcconfig"; sourceTree = "<group>"; };
+		D029F2D65AF81603527E1B85 /* Pods-LottoreCommend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.release.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.release.xcconfig"; sourceTree = "<group>"; };
 		E37E087B277358E200F7B127 /* LottoreCommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoreCommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37E087E277358E200F7B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37E0880277358E200F7B127 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,8 +30,8 @@
 		E37E0887277358E300F7B127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37E088A277358E300F7B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37E088C277358E300F7B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E37E089727735DC800F7B127 /* intro_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro_img.jpg; sourceTree = "<group>"; };
-		E37E089D27735E8F00F7B127 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		E37E089D27735E8F00F7B127 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		E37E08A027736FE300F7B127 /* intro_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = intro_img.jpg; path = ../../../../../.Trash/intro_img.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB75A7D9412BE92907FDB77 /* Pods_LottoreCommend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA73A7354BEAD03486B7E61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAFD7BCD18F0BB1C50019EAE /* Pods-LottoreCommend.debug.xcconfig */,
+				D029F2D65AF81603527E1B85 /* Pods-LottoreCommend.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B0365F653BEB1ADDBAEA99A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E37E0872277358E200F7B127 = {
 			isa = PBXGroup;
 			children = (
 				E37E087D277358E200F7B127 /* LottoreCommend */,
 				E37E087C277358E200F7B127 /* Products */,
+				1FA73A7354BEAD03486B7E61 /* Pods */,
+				6B0365F653BEB1ADDBAEA99A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +84,7 @@
 		E37E087D277358E200F7B127 /* LottoreCommend */ = {
 			isa = PBXGroup;
 			children = (
+				E37E08A027736FE300F7B127 /* intro_img.jpg */,
 				E37E089827735DED00F7B127 /* Statistics */,
 				E37E0892277359CE00F7B127 /* Assets */,
 				E37E087E277358E200F7B127 /* AppDelegate.swift */,
@@ -75,7 +101,6 @@
 		E37E0892277359CE00F7B127 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E37E089727735DC800F7B127 /* intro_img.jpg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -83,7 +108,7 @@
 		E37E089827735DED00F7B127 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				E37E089D27735E8F00F7B127 /* StatisticsView.swift */,
+				E37E089D27735E8F00F7B127 /* StatisticsViewController.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -95,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E37E088F277358E300F7B127 /* Build configuration list for PBXNativeTarget "LottoreCommend" */;
 			buildPhases = (
+				1144AA64657E75256B5BD25E /* [CP] Check Pods Manifest.lock */,
 				E37E0877277358E200F7B127 /* Sources */,
 				E37E0878277358E200F7B127 /* Frameworks */,
 				E37E0879277358E200F7B127 /* Resources */,
+				21FFA7A05DCA0B8585DE9788 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37E08A127736FE300F7B127 /* intro_img.jpg in Resources */,
 				E37E088B277358E300F7B127 /* LaunchScreen.storyboard in Resources */,
 				E37E0888277358E300F7B127 /* Assets.xcassets in Resources */,
 				E37E0886277358E200F7B127 /* Main.storyboard in Resources */,
@@ -154,13 +182,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1144AA64657E75256B5BD25E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottoreCommend-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21FFA7A05DCA0B8585DE9788 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E37E0877277358E200F7B127 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E37E0883277358E200F7B127 /* ViewController.swift in Sources */,
-				E37E089E27735E8F00F7B127 /* StatisticsView.swift in Sources */,
+				E37E089E27735E8F00F7B127 /* StatisticsViewController.swift in Sources */,
 				E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */,
 				E37E0881277358E200F7B127 /* SceneDelegate.swift in Sources */,
 			);
@@ -306,11 +376,14 @@
 		};
 		E37E0890277358E300F7B127 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFD7BCD18F0BB1C50019EAE /* Pods-LottoreCommend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RXBUP6L48V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LottoreCommend/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,8 +396,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = k4keye.LottoreCommend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raon.sdk.zkp.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,11 +407,14 @@
 		};
 		E37E0891277358E300F7B127 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D029F2D65AF81603527E1B85 /* Pods-LottoreCommend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RXBUP6L48V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LottoreCommend/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -350,8 +427,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = k4keye.LottoreCommend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raon.sdk.zkp.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
