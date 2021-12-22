@@ -16,28 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intro_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lAQ-zU-tE5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lAQ-zU-tE5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인생은 한방 이다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-IV-T8s">
-                                <rect key="frame" x="20" y="702" width="182" height="33"/>
+                                <rect key="frame" x="20" y="676" width="182" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="우리에게도 한방이 오기를." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crp-dE-JZQ">
-                                <rect key="frame" x="20" y="747" width="225" height="27"/>
+                                <rect key="frame" x="20" y="717" width="225" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-9b-lho">
+                                <rect key="frame" x="10" y="752" width="328" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5HB-Il-PJV"/>
+                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WLS-XH-tFQ"/>
+                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d7Y-LD-e99"/>
+                            <constraint firstAttribute="bottom" secondItem="lAQ-zU-tE5" secondAttribute="bottom" id="zgE-tv-cTG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="MQn-9b-lho" id="PNC-Bx-CTV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

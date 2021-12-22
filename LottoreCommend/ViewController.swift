@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         //todo 최신 정보를 모두 가지고있는지 db에서 확인한다.
         //todo 만약 최신정보를 가지고있지않다면 API 를통해 얻어온다.
         self.progressView.setProgress(1.0, animated: true)
+        LotteryModel.init().test()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             
           // 2초 후 실행될 부분
