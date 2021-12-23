@@ -24,44 +24,33 @@ class IntroController: UIViewController {
         progressView.setProgress(0.0, animated: true)
         
         //Progress 값 바인딩
-        viewModel.fetchNumber()
-        let binding = viewModel.number.subscribe(onNext: {
+        viewModel.validLottoData()
+        let binding = viewModel.progressValue.subscribe(onNext: {
             (value) in
             self.progressView.setProgress(value, animated: true)
         })
         
         
-        //다음 페이지로 넘어갈 준비가 되었다면
+        //다음 페이지로 넘어갈 준비가 되었다면 페이지 이동
         let bindingNextPage = viewModel.nextPage.subscribe(onNext: {
             (value) in
             if(value){
-                let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
-    
-                controller?.modalPresentationStyle = .fullScreen
-                controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                self.present(controller!, animated: true)
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
+        
+                    controller?.modalPresentationStyle = .fullScreen
+                    controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                    self.present(controller!, animated: true)
+                }
+                
             }
                        
         })
         
+        // 구독 취소
         bindingNextPage.dispose()
         binding.dispose()
-        
-        //todo 최신 정보를 모두 가지고있는지 db에서 확인한다.
-        //todo 만약 최신정보를 가지고있지않다면 API 를통해 얻어온다.
-        //self.progressView.setProgress(1.0, animated: true)
-        //LotteryModel.init().test()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            
-            // 2초 후 실행될 부분
-            
-//            let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
-//
-//            controller?.modalPresentationStyle = .fullScreen
-//            controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//            self.present(controller!, animated: true)
-            
-        }
     
     }
     

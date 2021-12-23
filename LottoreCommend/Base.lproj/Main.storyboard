@@ -101,15 +101,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LsP-oJ-Y5Q">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LsP-oJ-Y5Q">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="769" id="5Xe-yw-8ss"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="BQk-Re-kD9"/>
-                                    <constraint firstAttribute="width" constant="414" id="RQf-EY-I33"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="769" id="r5f-cQ-8Hr"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v7T-px-0Vu">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -124,12 +119,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="APC-IG-JrI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="bottom" secondItem="APC-IG-JrI" secondAttribute="bottom" id="Apl-cc-NND"/>
-                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="trailing" secondItem="APC-IG-JrI" secondAttribute="trailing" id="M9V-r9-x9t"/>
-                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="top" secondItem="APC-IG-JrI" secondAttribute="top" id="dHh-ou-WQX"/>
-                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="leading" secondItem="APC-IG-JrI" secondAttribute="leading" id="k1j-ci-sli"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="acj-rW-3Do"/>
                     <connections>

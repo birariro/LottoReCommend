@@ -18,9 +18,8 @@
 		E37E088B277358E300F7B127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37E0889277358E300F7B127 /* LaunchScreen.storyboard */; };
 		E37E089E27735E8F00F7B127 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E089D27735E8F00F7B127 /* StatisticsViewController.swift */; };
 		E37E08A127736FE300F7B127 /* intro_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E37E08A027736FE300F7B127 /* intro_img.jpg */; };
-		E37E08A527737A8B00F7B127 /* LotteNumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E08A427737A8B00F7B127 /* LotteNumEntity.swift */; };
-		E37E08A727737B5500F7B127 /* CurrentDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E08A627737B5500F7B127 /* CurrentDataEntity.swift */; };
-		E37E08A927737C1B00F7B127 /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E08A827737C1B00F7B127 /* LotteryModel.swift */; };
+		E37E08A527737A8B00F7B127 /* LottoNumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E08A427737A8B00F7B127 /* LottoNumEntity.swift */; };
+		E37E08A927737C1B00F7B127 /* LottoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E08A827737C1B00F7B127 /* LottoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +38,8 @@
 		E37E088C277358E300F7B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E37E089D27735E8F00F7B127 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		E37E08A027736FE300F7B127 /* intro_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = intro_img.jpg; path = ../../../../../.Trash/intro_img.jpg; sourceTree = "<group>"; };
-		E37E08A427737A8B00F7B127 /* LotteNumEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteNumEntity.swift; sourceTree = "<group>"; };
-		E37E08A627737B5500F7B127 /* CurrentDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataEntity.swift; sourceTree = "<group>"; };
-		E37E08A827737C1B00F7B127 /* LotteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryModel.swift; sourceTree = "<group>"; };
+		E37E08A427737A8B00F7B127 /* LottoNumEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumEntity.swift; sourceTree = "<group>"; };
+		E37E08A827737C1B00F7B127 /* LottoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E37E08A327737A4B00F7B127 /* Entity */,
-				E37E08A827737C1B00F7B127 /* LotteryModel.swift */,
+				E37E08A827737C1B00F7B127 /* LottoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,8 +136,7 @@
 		E37E08A327737A4B00F7B127 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				E37E08A427737A8B00F7B127 /* LotteNumEntity.swift */,
-				E37E08A627737B5500F7B127 /* CurrentDataEntity.swift */,
+				E37E08A427737A8B00F7B127 /* LottoNumEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -261,10 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3144BAB2774976900F0AC61 /* IntroViewModel.swift in Sources */,
-				E37E08A527737A8B00F7B127 /* LotteNumEntity.swift in Sources */,
-				E37E08A927737C1B00F7B127 /* LotteryModel.swift in Sources */,
+				E37E08A527737A8B00F7B127 /* LottoNumEntity.swift in Sources */,
+				E37E08A927737C1B00F7B127 /* LottoModel.swift in Sources */,
 				E3144BA927748B2300F0AC61 /* MainTabBarController.swift in Sources */,
-				E37E08A727737B5500F7B127 /* CurrentDataEntity.swift in Sources */,
 				E37E0883277358E200F7B127 /* IntroController.swift in Sources */,
 				E37E089E27735E8F00F7B127 /* StatisticsViewController.swift in Sources */,
 				E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */,

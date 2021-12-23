@@ -9,19 +9,31 @@ import Foundation
 import RxSwift
 
 class IntroViewModel {
-    var tmp:Float = 0.1
-    var number : Observable<Float> = Observable<Float>.of(0.0)
+    let lottoModel = LottoModel.init()
     
+    var progressValue : Observable<Float> = Observable<Float>.of(0.3)
     var nextPage : Observable<Bool> = Observable<Bool>.of(false)
-    init(){
+
+    
+    func validLottoData(){
         
-    }
-    func fetchNumber(){
-        var result = LotteryModel.init().getLottoData(drwNo: 354)
-        if(!result){
-            self.tmp = tmp + 0.1
-            self.number = Observable<Float>.of(1.0)
+        let allLottoEntity = lottoModel.getAllLottoEntity()
+        var currentKey = allLottoEntity.count + 1 //가장 마지막 인덱스가 회차이다.
+
+        while true {
+
+            let lottoEntity  = lottoModel.getLottoData(drwNo: currentKey)
+            if(lottoEntity.state){
+                lottoModel.storeLottoEntity(data: lottoEntity)
+
+                currentKey += 1
+            }else{
+                self.progressValue = Observable<Float>.of(1.0)
+                self.nextPage = Observable<Bool>.of(true)
+                break
+            }
         }
+
        
     }
     
