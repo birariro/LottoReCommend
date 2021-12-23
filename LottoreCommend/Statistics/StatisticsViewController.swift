@@ -10,19 +10,16 @@ import UIKit
 class StatisticsViewController : UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var numberList :[String] = []
+    let textCellIdentifier = "StatisticsCell"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return numberList.count
     }
-
-
-    
-    var data:[String]=["A","V","D"]
-    let textCellIdentifier = "StatisticsCell"
+  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! StatisticsCell
-        cell.label.text = data[indexPath.row]
+        cell.label.text = numberList[indexPath.row]
        // cell.textLabel?.text = data[indexPath.row]
         return cell
     }
@@ -33,6 +30,10 @@ class StatisticsViewController : UIViewController , UITableViewDelegate, UITable
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        for index in 1..<46{
+            numberList.append(String(index))
+        }
+       
     }
 
 
