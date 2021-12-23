@@ -26,7 +26,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인생은 한방 이다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-IV-T8s">
                                 <rect key="frame" x="20" y="676" width="182" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="0eg-VX-PVz"/>
                                     <constraint firstAttribute="height" constant="33" id="apy-Ie-qtK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -37,7 +36,6 @@
                                 <rect key="frame" x="20" y="717" width="225" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="G9N-RB-03Y"/>
-                                    <constraint firstAttribute="width" constant="225" id="kVi-gC-DBl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,7 +106,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="769" id="5Xe-yw-8ss"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="BQk-Re-kD9"/>
                                     <constraint firstAttribute="width" constant="414" id="RQf-EY-I33"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="769" id="r5f-cQ-8Hr"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v7T-px-0Vu">

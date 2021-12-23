@@ -9,6 +9,13 @@ target 'LottoreCommend' do
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'RealmSwift', '~>10'
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Action'
+  pod 'NSObject+Rx'
+  pod 'RxDataSources'
+  pod 'RxCoreData'
 
 end
 post_install do |installer_representation|

@@ -13,8 +13,8 @@ import RealmSwift
 
 class LotteryModel{
     
-    func test(){
-        let URL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=861"
+    func getLottoData(drwNo : Int) -> Bool{
+        let URL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(drwNo)"
         let header : HTTPHeaders = [
             "Content-Type":"application/json",
             "charset":"utf-8"
@@ -32,9 +32,15 @@ class LotteryModel{
 //            print("[k4keye] drwtNo4 \(resJson["drwtNo4"])")
 //            print("[k4keye] drwtNo5 \(resJson["drwtNo5"])")
 //            print("[k4keye] drwtNo6 \(resJson["drwtNo6"])")
+            return true
         case .failure(let error) :
             print("BLOCKCHAIN_GET_API_URL Error : \(error)")
         }
+        return false
         
+    }
+    
+    func getCurrentData() -> Int{
+        return 0
     }
 }
