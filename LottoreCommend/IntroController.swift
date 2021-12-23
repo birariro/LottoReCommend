@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroController: UIViewController {
    
     @IBOutlet weak var progressView: UIProgressView!
     //@IBOutlet weak var progressView: UIProgressView!
