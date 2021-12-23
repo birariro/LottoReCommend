@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+class StatisticsCell : UITableViewCell{
+    
+    @IBOutlet weak var label: UILabel!
+}

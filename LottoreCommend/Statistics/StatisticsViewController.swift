@@ -8,21 +8,26 @@
 import UIKit
 
 class StatisticsViewController : UIViewController , UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
 
 
+    
     var data:[String]=["A","V","D"]
-    let textCellIdentifier = "Cell"
+    let textCellIdentifier = "StatisticsCell"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! StatisticsCell
+        cell.label.text = data[indexPath.row]
+       // cell.textLabel?.text = data[indexPath.row]
         return cell
     }
 
     
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
