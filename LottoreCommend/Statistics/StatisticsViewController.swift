@@ -23,6 +23,7 @@ class StatisticsViewController : UIViewController , UITableViewDelegate, UITable
 
     
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self

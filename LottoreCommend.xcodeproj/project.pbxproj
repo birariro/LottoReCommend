@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DFB75A7D9412BE92907FDB77 /* Pods_LottoreCommend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */; };
+		E3144BA927748B2300F0AC61 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BA827748B2300F0AC61 /* MainTabBarController.swift */; };
 		E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E087E277358E200F7B127 /* AppDelegate.swift */; };
 		E37E0881277358E200F7B127 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0880277358E200F7B127 /* SceneDelegate.swift */; };
-		E37E0883277358E200F7B127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0882277358E200F7B127 /* ViewController.swift */; };
+		E37E0883277358E200F7B127 /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0882277358E200F7B127 /* IntroController.swift */; };
 		E37E0886277358E200F7B127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37E0884277358E200F7B127 /* Main.storyboard */; };
 		E37E0888277358E300F7B127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37E0887277358E300F7B127 /* Assets.xcassets */; };
 		E37E088B277358E300F7B127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37E0889277358E300F7B127 /* LaunchScreen.storyboard */; };
@@ -25,10 +26,11 @@
 		7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoreCommend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFD7BCD18F0BB1C50019EAE /* Pods-LottoreCommend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.debug.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.debug.xcconfig"; sourceTree = "<group>"; };
 		D029F2D65AF81603527E1B85 /* Pods-LottoreCommend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.release.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.release.xcconfig"; sourceTree = "<group>"; };
+		E3144BA827748B2300F0AC61 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E37E087B277358E200F7B127 /* LottoreCommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoreCommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37E087E277358E200F7B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37E0880277358E200F7B127 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E37E0882277358E200F7B127 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E37E0882277358E200F7B127 /* IntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
 		E37E0885277358E200F7B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E37E0887277358E300F7B127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37E088A277358E300F7B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,11 +98,12 @@
 				E37E0892277359CE00F7B127 /* Assets */,
 				E37E087E277358E200F7B127 /* AppDelegate.swift */,
 				E37E0880277358E200F7B127 /* SceneDelegate.swift */,
-				E37E0882277358E200F7B127 /* ViewController.swift */,
+				E37E0882277358E200F7B127 /* IntroController.swift */,
 				E37E0884277358E200F7B127 /* Main.storyboard */,
 				E37E0887277358E300F7B127 /* Assets.xcassets */,
 				E37E0889277358E300F7B127 /* LaunchScreen.storyboard */,
 				E37E088C277358E300F7B127 /* Info.plist */,
+				E3144BA827748B2300F0AC61 /* MainTabBarController.swift */,
 			);
 			path = LottoreCommend;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 			files = (
 				E37E08A527737A8B00F7B127 /* LotteNumEntity.swift in Sources */,
 				E37E08A927737C1B00F7B127 /* LotteryModel.swift in Sources */,
+				E3144BA927748B2300F0AC61 /* MainTabBarController.swift in Sources */,
 				E37E08A727737B5500F7B127 /* CurrentDataEntity.swift in Sources */,
-				E37E0883277358E200F7B127 /* ViewController.swift in Sources */,
+				E37E0883277358E200F7B127 /* IntroController.swift in Sources */,
 				E37E089E27735E8F00F7B127 /* StatisticsViewController.swift in Sources */,
 				E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */,
 				E37E0881277358E200F7B127 /* SceneDelegate.swift in Sources */,

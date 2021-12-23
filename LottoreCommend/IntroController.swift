@@ -21,18 +21,21 @@ class IntroController: UIViewController {
      
     }
     override func viewDidAppear(_ animated: Bool) {
-        progressView.setProgress(0.1, animated: true)
+        progressView.setProgress(0.0, animated: true)
         //todo 최신 정보를 모두 가지고있는지 db에서 확인한다.
         //todo 만약 최신정보를 가지고있지않다면 API 를통해 얻어온다.
         self.progressView.setProgress(1.0, animated: true)
-        LotteryModel.init().test()
+        //LotteryModel.init().test()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             
-          // 2초 후 실행될 부분
-            let controller = self.storyboard?.instantiateViewController(withIdentifier: "StatisticsViewController")
+            // 2초 후 실행될 부분
+            
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
+            
             controller?.modalPresentationStyle = .fullScreen
             controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             self.present(controller!, animated: true)
+            
         }
     
     }
