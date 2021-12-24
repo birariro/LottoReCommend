@@ -101,9 +101,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LsP-oJ-Y5Q">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LsP-oJ-Y5Q">
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticsCell" rowHeight="93" id="v7T-px-0Vu" customClass="StatisticsCell" customModule="LottoreCommend">
@@ -127,6 +126,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pc0-0N-LE3" secondAttribute="trailing" constant="20" symbolic="YES" id="5Zo-ml-Wuh"/>
                                                 <constraint firstItem="Lgc-Gn-s08" firstAttribute="leading" secondItem="Qgs-oy-FgU" secondAttribute="leading" constant="10" id="YUX-1X-qUQ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="pc0-0N-LE3" secondAttribute="bottom" id="Zya-Ez-rnM"/>
                                                 <constraint firstItem="pc0-0N-LE3" firstAttribute="leading" secondItem="Lgc-Gn-s08" secondAttribute="trailing" constant="54" id="bNn-ng-wdd"/>
@@ -136,14 +136,33 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageViewer" destination="Lgc-Gn-s08" id="8hk-Fq-9od"/>
                                             <outlet property="label" destination="pc0-0N-LE3" id="ORL-W0-3OT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 확률표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-W4-JhZ">
+                                <rect key="frame" x="20" y="69" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Uui-3h-Sik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="APC-IG-JrI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hTe-W4-JhZ" firstAttribute="top" secondItem="APC-IG-JrI" secondAttribute="top" constant="25" id="9xm-tT-aTO"/>
+                            <constraint firstAttribute="trailing" secondItem="LsP-oJ-Y5Q" secondAttribute="trailing" id="FgB-Q8-t41"/>
+                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="leading" secondItem="Vbw-ok-RTf" secondAttribute="leading" id="GmN-vw-DNB"/>
+                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="top" secondItem="hTe-W4-JhZ" secondAttribute="bottom" constant="40" id="N1Y-oa-Boc"/>
+                            <constraint firstItem="APC-IG-JrI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hTe-W4-JhZ" secondAttribute="trailing" symbolic="YES" id="cIj-8b-Txy"/>
+                            <constraint firstItem="hTe-W4-JhZ" firstAttribute="leading" secondItem="APC-IG-JrI" secondAttribute="leading" constant="20" id="rNx-us-O4D"/>
+                            <constraint firstItem="LsP-oJ-Y5Q" firstAttribute="bottom" secondItem="APC-IG-JrI" secondAttribute="bottom" id="wpX-2z-KDE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="acj-rW-3Do"/>
                     <connections>

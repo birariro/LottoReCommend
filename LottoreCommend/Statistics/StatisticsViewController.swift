@@ -20,6 +20,7 @@ class StatisticsViewController : UIViewController , UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! StatisticsCell
         cell.label.text = numberList[indexPath.row]
+        cell.imageViewer.image = UIImage(named: "ball_"+numberList[indexPath.row])
        // cell.textLabel?.text = data[indexPath.row]
         return cell
     }
@@ -28,6 +29,7 @@ class StatisticsViewController : UIViewController , UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         for index in 1..<46{

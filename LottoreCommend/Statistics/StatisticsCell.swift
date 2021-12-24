@@ -10,5 +10,6 @@ import UIKit
 
 class StatisticsCell : UITableViewCell{
     
+    @IBOutlet weak var imageViewer: UIImageView!
     @IBOutlet weak var label: UILabel!
 }
