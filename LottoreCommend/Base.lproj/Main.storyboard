@@ -16,12 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_img" translatesAutoresizingMaskIntoConstraints="NO" id="lAQ-zU-tE5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intro_img" translatesAutoresizingMaskIntoConstraints="NO" id="QtQ-8a-tkV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="BLI-zF-feb"/>
-                                    <constraint firstAttribute="height" constant="896" id="TJh-Kj-4iF"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인생은 한방 이다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-IV-T8s">
                                 <rect key="frame" x="20" y="676" width="182" height="33"/>
@@ -48,25 +45,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5HB-Il-PJV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQn-9b-lho" secondAttribute="trailing" constant="20" id="6FG-9B-9kA"/>
-                            <constraint firstAttribute="bottom" secondItem="lAQ-zU-tE5" secondAttribute="bottom" id="AcG-nY-WHX"/>
                             <constraint firstItem="MQn-9b-lho" firstAttribute="top" secondItem="crp-dE-JZQ" secondAttribute="bottom" constant="8" id="Gvz-ki-Q0s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="crp-dE-JZQ" secondAttribute="trailing" constant="169" id="Ros-V5-qCF"/>
-                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WLS-XH-tFQ"/>
                             <constraint firstItem="Sga-IV-T8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xv7-dP-Gn1"/>
                             <constraint firstItem="MQn-9b-lho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bLa-Ef-F0G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQn-9b-lho" secondAttribute="trailing" constant="20" id="c3s-Bs-Mct"/>
                             <constraint firstItem="Sga-IV-T8s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="632" id="cEf-Ui-jZ8"/>
-                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d7Y-LD-e99"/>
                             <constraint firstItem="MQn-9b-lho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jUk-mL-8Lc"/>
-                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nEG-fS-ri6"/>
                             <constraint firstItem="crp-dE-JZQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rOZ-0I-IS9"/>
                             <constraint firstItem="crp-dE-JZQ" firstAttribute="top" secondItem="Sga-IV-T8s" secondAttribute="bottom" constant="8" id="rvZ-iI-CjF"/>
-                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tH8-83-GbP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sga-IV-T8s" secondAttribute="trailing" constant="212" id="wWh-TB-hvR"/>
-                            <constraint firstItem="lAQ-zU-tE5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wrt-wT-dhj"/>
-                            <constraint firstAttribute="bottom" secondItem="lAQ-zU-tE5" secondAttribute="bottom" id="zgE-tv-cTG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -75,23 +64,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3459" y="635"/>
+            <point key="canvasLocation" x="-3459.420289855073" y="634.82142857142856"/>
         </scene>
         <!--Setting-->
         <scene sceneID="JKm-XV-8lG">
             <objects>
-                <viewController id="JtX-iM-OnC" sceneMemberID="viewController">
+                <viewController id="JtX-iM-OnC" customClass="ChartViewController" customModule="LottoreCommend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yeD-7i-SaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aen-Sa-8Zh" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="adX-36-axp"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" image="pencil" catalog="system" id="gon-dC-VM0"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="aen-Sa-8Zh" id="zxe-up-Mjw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GL2-tM-oBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1584" y="1128"/>
+            <point key="canvasLocation" x="-1584.057971014493" y="1127.6785714285713"/>
         </scene>
         <!--Home-->
         <scene sceneID="lRR-D1-BbX">
@@ -183,8 +182,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wMC-h3-RyJ" kind="relationship" relationship="viewControllers" id="lF2-8M-j4F"/>
                         <segue destination="JtX-iM-OnC" kind="relationship" relationship="viewControllers" id="qS2-4a-KXw"/>
+                        <segue destination="wMC-h3-RyJ" kind="relationship" relationship="viewControllers" id="lF2-8M-j4F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDC-0b-j3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,9 +198,6 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

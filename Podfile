@@ -17,6 +17,7 @@ target 'LottoreCommend' do
   pod 'RxDataSources'
   pod 'RxCoreData'
 
+  pod 'Charts'
 end
 post_install do |installer_representation|
     installer_representation.pods_project.targets.each do |target|

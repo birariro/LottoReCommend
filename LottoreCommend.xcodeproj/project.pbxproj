@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DFB75A7D9412BE92907FDB77 /* Pods_LottoreCommend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */; };
+		E3119CC72776420A00DFB8B1 /* intro_videos.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E3119CC6277640FC00DFB8B1 /* intro_videos.mp4 */; };
 		E3144BA927748B2300F0AC61 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BA827748B2300F0AC61 /* MainTabBarController.swift */; };
 		E3144BAB2774976900F0AC61 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BAA2774976900F0AC61 /* IntroViewModel.swift */; };
 		E3144BAD2774CDD900F0AC61 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BAC2774CDD900F0AC61 /* StatisticsCell.swift */; };
+		E3144BB02774DBE800F0AC61 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BAF2774DBE800F0AC61 /* StatisticsViewModel.swift */; };
+		E33EDA5F2776ECD200A3D999 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33EDA5E2776ECD200A3D999 /* ChartViewController.swift */; };
 		E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E087E277358E200F7B127 /* AppDelegate.swift */; };
 		E37E0881277358E200F7B127 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0880277358E200F7B127 /* SceneDelegate.swift */; };
 		E37E0883277358E200F7B127 /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E0882277358E200F7B127 /* IntroController.swift */; };
@@ -26,9 +29,12 @@
 		7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoreCommend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFD7BCD18F0BB1C50019EAE /* Pods-LottoreCommend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.debug.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.debug.xcconfig"; sourceTree = "<group>"; };
 		D029F2D65AF81603527E1B85 /* Pods-LottoreCommend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.release.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.release.xcconfig"; sourceTree = "<group>"; };
+		E3119CC6277640FC00DFB8B1 /* intro_videos.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro_videos.mp4; path = ../../../../../Downloads/intro_videos.mp4; sourceTree = "<group>"; };
 		E3144BA827748B2300F0AC61 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E3144BAA2774976900F0AC61 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		E3144BAC2774CDD900F0AC61 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
+		E3144BAF2774DBE800F0AC61 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		E33EDA5E2776ECD200A3D999 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		E37E087B277358E200F7B127 /* LottoreCommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoreCommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37E087E277358E200F7B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37E0880277358E200F7B127 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E33EDA5D2776ECC400A3D999 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				E33EDA5E2776ECD200A3D999 /* ChartViewController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		E37E0872277358E200F7B127 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +106,8 @@
 		E37E087D277358E200F7B127 /* LottoreCommend */ = {
 			isa = PBXGroup;
 			children = (
+				E33EDA5D2776ECC400A3D999 /* Chart */,
+				E3119CC6277640FC00DFB8B1 /* intro_videos.mp4 */,
 				E37E08A227737A3C00F7B127 /* Model */,
 				E37E089827735DED00F7B127 /* Statistics */,
 				E37E087E277358E200F7B127 /* AppDelegate.swift */,
@@ -112,6 +128,7 @@
 			children = (
 				E37E089D27735E8F00F7B127 /* StatisticsViewController.swift */,
 				E3144BAC2774CDD900F0AC61 /* StatisticsCell.swift */,
+				E3144BAF2774DBE800F0AC61 /* StatisticsViewModel.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3119CC72776420A00DFB8B1 /* intro_videos.mp4 in Resources */,
 				E37E088B277358E300F7B127 /* LaunchScreen.storyboard in Resources */,
 				E37E0888277358E300F7B127 /* Assets.xcassets in Resources */,
 				E37E0886277358E200F7B127 /* Main.storyboard in Resources */,
@@ -251,12 +269,14 @@
 				E3144BAB2774976900F0AC61 /* IntroViewModel.swift in Sources */,
 				E37E08A527737A8B00F7B127 /* LottoNumEntity.swift in Sources */,
 				E37E08A927737C1B00F7B127 /* LottoModel.swift in Sources */,
+				E3144BB02774DBE800F0AC61 /* StatisticsViewModel.swift in Sources */,
 				E3144BA927748B2300F0AC61 /* MainTabBarController.swift in Sources */,
 				E37E0883277358E200F7B127 /* IntroController.swift in Sources */,
 				E37E089E27735E8F00F7B127 /* StatisticsViewController.swift in Sources */,
 				E37E087F277358E200F7B127 /* AppDelegate.swift in Sources */,
 				E37E0881277358E200F7B127 /* SceneDelegate.swift in Sources */,
 				E3144BAD2774CDD900F0AC61 /* StatisticsCell.swift in Sources */,
+				E33EDA5F2776ECD200A3D999 /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

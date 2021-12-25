@@ -13,9 +13,10 @@ import RealmSwift
 
 class LottoModel{
     
-    let realm = try! Realm()
+   
     
     func getLottoData(drwNo : Int) -> LottoNumEntity{
+        
         let URL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(drwNo)"
         let header : HTTPHeaders = [
             "Content-Type":"application/json",
@@ -30,7 +31,7 @@ class LottoModel{
                 
                 
                 let state = resJson["returnValue"]
-                print("[k4keye] state \(state)")
+                
                 if(state == "success"){
                     lotteNumEntity.state = true
                     lotteNumEntity.drwNo = resJson["drwNo"].intValue
@@ -56,6 +57,7 @@ class LottoModel{
     }
     
     func storeLottoEntity(data : LottoNumEntity){
+        let realm = try! Realm()
         do{
             try realm.write{ //Realm 을 Write로 열어서
                 realm.add(data) //저장
@@ -66,6 +68,7 @@ class LottoModel{
     }
     
     func getAllLottoEntity() -> Results<LottoNumEntity>{
+        let realm = try! Realm()
         return realm.objects(LottoNumEntity.self)
     }
 }

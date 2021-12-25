@@ -11,20 +11,22 @@ import RxSwift
 class IntroController: UIViewController {
    
     @IBOutlet weak var progressView: UIProgressView!
-    
     let viewModel = IntroViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView.progressViewStyle = .default
+        
      
     }
   
     override func viewDidAppear(_ animated: Bool) {
+    
         progressView.setProgress(0.0, animated: true)
         
-        //Progress 값 바인딩
         viewModel.validLottoData()
+       
+        //Progress 값 바인딩
         let binding = viewModel.progressValue.subscribe(onNext: {
             (value) in
             self.progressView.setProgress(value, animated: true)

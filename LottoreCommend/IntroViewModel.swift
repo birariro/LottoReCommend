@@ -14,12 +14,13 @@ class IntroViewModel {
     var progressValue : Observable<Float> = Observable<Float>.of(0.3)
     var nextPage : Observable<Bool> = Observable<Bool>.of(false)
 
+   
     
-    func validLottoData(){
+    func validLottoData() {
         
         let allLottoEntity = lottoModel.getAllLottoEntity()
         var currentKey = allLottoEntity.count + 1 //가장 마지막 인덱스가 회차이다.
-
+        print("[k4keye] 저장된 마지막 회차 : \(currentKey)")
         while true {
 
             let lottoEntity  = lottoModel.getLottoData(drwNo: currentKey)
@@ -28,12 +29,13 @@ class IntroViewModel {
 
                 currentKey += 1
             }else{
-                self.progressValue = Observable<Float>.of(1.0)
-                self.nextPage = Observable<Bool>.of(true)
+                print("[k4keye] intro init 작업 완료 ")
                 break
             }
         }
-
+        
+        self.progressValue = Observable<Float>.of(1.0)
+        self.nextPage = Observable<Bool>.of(true)
        
     }
     
