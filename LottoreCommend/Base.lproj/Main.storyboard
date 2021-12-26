@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="-3459.420289855073" y="634.82142857142856"/>
         </scene>
-        <!--Setting-->
+        <!--차트-->
         <scene sceneID="JKm-XV-8lG">
             <objects>
                 <viewController id="JtX-iM-OnC" customClass="ChartViewController" customModule="LottoreCommend" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,16 +75,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aen-Sa-8Zh" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                                <rect key="frame" x="39" y="147" width="337" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="낮은 확률" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Us-Yo-oWC">
+                                <rect key="frame" x="32" y="459" width="85" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47G-hC-3tQ" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="39" y="495" width="337" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="높은 확률" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhZ-bL-PRK">
+                                <rect key="frame" x="32" y="102" width="85" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="adX-36-axp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nhZ-bL-PRK" firstAttribute="top" secondItem="adX-36-axp" secondAttribute="top" constant="58" id="G8i-qc-P45"/>
+                            <constraint firstItem="nhZ-bL-PRK" firstAttribute="leading" secondItem="adX-36-axp" secondAttribute="leading" constant="32" id="wQ1-7l-syc"/>
+                            <constraint firstItem="adX-36-axp" firstAttribute="trailing" secondItem="nhZ-bL-PRK" secondAttribute="trailing" constant="297" id="yIw-5J-CcI"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" image="pencil" catalog="system" id="gon-dC-VM0"/>
+                    <tabBarItem key="tabBarItem" title="차트" image="chart.pie" catalog="system" id="gon-dC-VM0"/>
                     <connections>
+                        <outlet property="lowPieChartView" destination="47G-hC-3tQ" id="gL2-5F-MYM"/>
                         <outlet property="pieChartView" destination="aen-Sa-8Zh" id="zxe-up-Mjw"/>
                     </connections>
                 </viewController>
@@ -193,9 +217,12 @@
     </scenes>
     <resources>
         <image name="ball_1" width="52" height="52"/>
+        <image name="chart.pie" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="intro_img" width="1512" height="2016"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

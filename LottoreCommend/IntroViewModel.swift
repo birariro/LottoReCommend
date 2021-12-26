@@ -7,13 +7,19 @@
 
 import Foundation
 import RxSwift
+protocol Observer{
+    var value:Float{get}
+    func update()
+}
 
 class IntroViewModel {
     let lottoModel = LottoModel.init()
     
-    var progressValue : Observable<Float> = Observable<Float>.of(0.3)
+    //var progressValue : Observable<Float> = Observable<Float>.just(0.3)
     var nextPage : Observable<Bool> = Observable<Bool>.of(false)
 
+    var progressValue : PublishSubject<Float> = PublishSubject()
+    var tmp_value :Float = 0.0
    
     
     func validLottoData() {
@@ -26,7 +32,9 @@ class IntroViewModel {
             let lottoEntity  = lottoModel.getLottoData(drwNo: currentKey)
             if(lottoEntity.state){
                 lottoModel.storeLottoEntity(data: lottoEntity)
-
+                tmp_value += 0.1
+                self.progressValue.onNext(tmp_value)
+           
                 currentKey += 1
             }else{
                 print("[k4keye] intro init 작업 완료 ")
@@ -34,8 +42,7 @@ class IntroViewModel {
             }
         }
         
-        self.progressValue = Observable<Float>.of(1.0)
-        self.nextPage = Observable<Bool>.of(true)
+        self.nextPage =  Observable<Bool>.of(true)
        
     }
     
