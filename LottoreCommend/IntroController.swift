@@ -13,46 +13,52 @@ class IntroController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     let viewModel = IntroViewModel()
     var disposeBag = DisposeBag()
+    @IBOutlet weak var progressText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView.progressViewStyle = .default
-        
+       // self.progressText.text = "0 퍼센트"
      
     }
   
+       
+
     override func viewDidAppear(_ animated: Bool) {
-        progressView.setProgress(0.0, animated: true)
-        
-        viewModel.validLottoData()
+        super.viewDidAppear(animated)
+        self.progressText.text = "0 퍼센트"
+        self.view.layoutIfNeeded()
+  
+        progressText.reloadInputViews()
+        //viewModel.validLottoData()
        
         //Progress 값 바인딩
-        let binding = viewModel.progressValue.subscribe(onNext: {
-            (value) in
-            self.progressView.setProgress(value, animated: true)
-        }).disposed(by: disposeBag)
+        viewModel.validLottoData()
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onNext: { (value) in
+                            print("\(value) 퍼센트")
+
+                    DispatchQueue.main.async {
+                        self.progressText.text = "\(value) 퍼센트"
+                        self.progressView.setProgress(0.4, animated: true)
+                    }
+
+                        },
+                onCompleted: {
+                   // DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
+
+                        controller?.modalPresentationStyle = .fullScreen
+                        controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                        self.present(controller!, animated: true)
+                    //}
+                }).disposed(by: disposeBag)
+
+
         
-        
-        //다음 페이지로 넘어갈 준비가 되었다면 페이지 이동
-        let bindingNextPage = viewModel.nextPage.subscribe(onNext: {
-            (value) in
-            if(value){
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
-        
-                    controller?.modalPresentationStyle = .fullScreen
-                    controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                    self.present(controller!, animated: true)
-                }
-                
-            }
-                       
-        })
-        
-        // 구독 취소
-        bindingNextPage.dispose()
-        //binding.dispose()
     
     }
+
     
 
 
