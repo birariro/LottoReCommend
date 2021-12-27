@@ -45,7 +45,22 @@ class RandomController : UIViewController {
     @IBAction func btnClick(_ sender: Any) {
         numberViewHidden(enable: true)
         animationView.play{ (finish) in
+            var randomNumberList: Set = Set<Int>()
+            
+            while randomNumberList.count <= 5{
+                randomNumberList.insert(Int.random(in: 1...45))
+            }
+            //정렬
+            let array = randomNumberList.sorted()
+         
+            self.numberView1.image = UIImage(named: "ball_"+String(array[0]))
+            self.numberView2.image = UIImage(named: "ball_"+String(array[1]))
+            self.numberView3.image = UIImage(named: "ball_"+String(array[2]))
+            self.numberView4.image = UIImage(named: "ball_"+String(array[3]))
+            self.numberView5.image = UIImage(named: "ball_"+String(array[4]))
+            self.numberView6.image = UIImage(named: "ball_"+String(array[5]))
             self.numberViewHidden(enable: false)
+            self.animationView.stop()
         }
     }
     
