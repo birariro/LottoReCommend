@@ -16,17 +16,20 @@ class ChartViewController : UIViewController,ChartViewDelegate{
     @IBOutlet weak var pieChartView: PieChartView!
     //낮은 통계
     @IBOutlet weak var lowPieChartView: PieChartView!
+    //최신 회차
+    @IBOutlet weak var lastLabel: UILabel!
     
     var index = 0
     let maxIndex = 10
     var total = 0
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let lottoModel = LottoModel.init()
         let allLottoEntity = lottoModel.getAllLottoEntity()
         let lottoData = initLottoData(allLottoEntity: allLottoEntity)
-        
+        lastLabel.text = "최신 회차 : \(allLottoEntity.count)"
         total = allLottoEntity.count
         
 
@@ -46,9 +49,14 @@ class ChartViewController : UIViewController,ChartViewDelegate{
        
     }
     
-    private func getCalculation(total:Int, target:Int) -> Float{
-   
-        return (Float(target) / Float(total)) * 100
+    private func getCalculation(index:Int, isTop:Bool ,total:Int, target:Int) -> Float{
+        //크기 차이를 주기위해 index까지 연산
+        //큰 순서는 뒤로갈수록 작아지게
+        if(isTop){
+            return ((Float(target) / Float(total)) * 100) + (10-Float(index))
+        }
+        //작은 순서는 뒤로 갈수록 커지게
+        return ((Float(target) / Float(total)) * 100) + Float(index)
        
     }
     
@@ -66,8 +74,10 @@ class ChartViewController : UIViewController,ChartViewDelegate{
         for (key , value) in chartData {
             print("[k4keye] key  : \(key) , value : \(value)")
             let entry = PieChartDataEntry()
+            
+            
             entry.label = String(key) + " 번"
-            let calc_value = Double(getCalculation(total: total, target: value)) //퍼센트
+            let calc_value = Double(getCalculation(index: index , isTop:isTop ,total: total, target: value)) //퍼센트
             entry.value = calc_value
             
             
@@ -81,8 +91,10 @@ class ChartViewController : UIViewController,ChartViewDelegate{
         }
         
 
-
+        
         let dataSet = PieChartDataSet(entries: entries, label: "순서 입니다.")
+        dataSet.drawValuesEnabled = false
+        
         dataSet.colors = ChartColorTemplates.vordiplom()
         if(isTop == false){
             dataSet.colors = ChartColorTemplates.liberty()

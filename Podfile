@@ -16,6 +16,7 @@ target 'LottoreCommend' do
   pod 'NSObject+Rx'
   pod 'RxDataSources'
   pod 'RxCoreData'
+  pod 'lottie-ios'
 
   pod 'Charts'
 end
