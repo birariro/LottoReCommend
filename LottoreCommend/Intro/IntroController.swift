@@ -37,7 +37,7 @@ class IntroController: UIViewController {
 
                         },
                 onCompleted: {
-                   // DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                
                         self.indicatorView.stopAnimating()
                         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")
@@ -45,7 +45,7 @@ class IntroController: UIViewController {
                         controller?.modalPresentationStyle = .fullScreen
                         controller?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
                         self.present(controller!, animated: true)
-                    //}
+                    }
                 }).disposed(by: disposeBag)
 
 
