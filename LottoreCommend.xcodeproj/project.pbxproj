@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DFB75A7D9412BE92907FDB77 /* Pods_LottoreCommend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */; };
-		E3119CC72776420A00DFB8B1 /* intro_videos.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E3119CC6277640FC00DFB8B1 /* intro_videos.mp4 */; };
 		E3144BA927748B2300F0AC61 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BA827748B2300F0AC61 /* MainTabBarController.swift */; };
 		E3144BAB2774976900F0AC61 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BAA2774976900F0AC61 /* IntroViewModel.swift */; };
 		E3144BAD2774CDD900F0AC61 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3144BAC2774CDD900F0AC61 /* StatisticsCell.swift */; };
@@ -31,7 +30,6 @@
 		7D468F1DFC33CE356F88A0F8 /* Pods_LottoreCommend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoreCommend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFD7BCD18F0BB1C50019EAE /* Pods-LottoreCommend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.debug.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.debug.xcconfig"; sourceTree = "<group>"; };
 		D029F2D65AF81603527E1B85 /* Pods-LottoreCommend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoreCommend.release.xcconfig"; path = "Target Support Files/Pods-LottoreCommend/Pods-LottoreCommend.release.xcconfig"; sourceTree = "<group>"; };
-		E3119CC6277640FC00DFB8B1 /* intro_videos.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro_videos.mp4; path = ../../../../../Downloads/intro_videos.mp4; sourceTree = "<group>"; };
 		E3144BA827748B2300F0AC61 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E3144BAA2774976900F0AC61 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		E3144BAC2774CDD900F0AC61 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				E39B8F7F2779D2B9005FB899 /* Intro */,
 				E39B8F7C2779D2AC005FB899 /* Random */,
 				E33EDA5D2776ECC400A3D999 /* Chart */,
-				E3119CC6277640FC00DFB8B1 /* intro_videos.mp4 */,
 				E37E08A227737A3C00F7B127 /* Model */,
 				E37E089827735DED00F7B127 /* Statistics */,
 				E37E087E277358E200F7B127 /* AppDelegate.swift */,
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3119CC72776420A00DFB8B1 /* intro_videos.mp4 in Resources */,
 				E37E088B277358E300F7B127 /* LaunchScreen.storyboard in Resources */,
 				E39B8F812779D55C005FB899 /* snowman.json in Resources */,
 				E37E0888277358E300F7B127 /* Assets.xcassets in Resources */,
@@ -377,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "한번만제발";
+				INFOPLIST_KEY_CFBundleDisplayName = "나와라잉";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -433,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "한번만제발";
+				INFOPLIST_KEY_CFBundleDisplayName = "나와라잉";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
